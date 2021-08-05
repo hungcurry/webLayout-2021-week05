@@ -17,6 +17,7 @@ body {
 		line-height: 1.5;
     font-size: 1.6rem;
     font-weight: 400;
+		color: $black;
 }
 body.active{
     overflow-y: hidden;
@@ -61,7 +62,7 @@ b {
 	font-weight: 500;
 }
 a{
-	color: $white;
+	color: $black;
 	text-decoration: none;
 	word-break: break-all;
 }
