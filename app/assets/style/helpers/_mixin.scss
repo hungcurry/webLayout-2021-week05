@@ -1,3 +1,6 @@
+/*-------------------------*/
+/* mixin
+---------------------------*/
 @mixin desktop($mq : 1024){
     @media(min-width: $mq + px){
       @content;
@@ -34,11 +37,4 @@
 @mixin width($width , $height) {
     width: $width;
     height: $height;
-}
-
-.lato-400{
-    font-weight:400;
-}
-.lato-700{
-    font-weight:700;
 }

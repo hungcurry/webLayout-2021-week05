@@ -28,7 +28,7 @@ img {
 	height: auto;
 	display: block;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6{
 	line-height: 1.2;
   margin: 0;
 }
@@ -67,5 +67,5 @@ a{
 	word-break: break-all;
 }
 * {
-	outline: 1px solid red;
+	// outline: 1px solid red;
 }

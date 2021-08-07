@@ -1,0 +1,26 @@
+/*-------------------------*/
+/* navbar
+---------------------------*/
+.topNav{
+  padding: 3.2rem 2rem;
+  .title{
+    margin-right: 4.8rem;
+  }
+  .material-search{
+    margin-right: 2.6rem;
+  }
+}
+.dropdown{
+  .btn {
+    &:after {
+      display: none;
+    }
+  }
+  .assignmentBtn-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: $secondary;
+  }
+}

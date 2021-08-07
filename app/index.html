@@ -5,4 +5,432 @@ engine: ejs
 current: index
 ---
 
+<!-- 內容 -->
+<section class="assignmentContent">
+  <div class="container">
+    <div class="row justify-content-between align-items-center mb-2">
+      <div class="w-auto dropdown">
+        <button class="btn dropdown-toggle font-base fw-700 p-0 pe-6" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          All (4)
+          <span class="material-icons assignmentBtn-icon text-secondary">expand_more</span>
+        </button>
+        <ul class="dropdown-menu font-base" aria-labelledby="dropdownMenuButton2">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </ul>
+      </div>
+      <p class="w-auto text-muted font-xs">2 comments</p>
+    </div>
+    <div class="row gx-4">
+      <!-- 左邊區塊 -->
+      <div class="col-lg-4 mb-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-01" role="tab" aria-controls="home">
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li>Chapter Assignment 2</li>
+              <li>4 hrs ago</li>
+            </ul>
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li class="font-base fw-700">Please check this file…</li>
+              <li class="text-muted">Emily Wang</li>
+            </ul>
+          </a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-02" role="tab" aria-controls="profile">
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li>Chapter Assignment 1</li>
+              <li>12 hrs ago</li>
+            </ul>
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li class="font-base fw-700">My Homework</li>
+              <li class="text-muted">David Xu</li>
+            </ul>
+          </a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-03" role="tab" aria-controls="messages">
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li>Final Assignment</li>
+              <li>18 hrs ago</li>
+            </ul>
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li class="font-base fw-700">Have a problem with this…</li>
+              <li class="text-muted">Tony Wei</li>
+            </ul>
+          </a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-04" role="tab" aria-controls="settings">
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li>Final Assignment</li>
+              <li>19 hrs ago</li>
+            </ul>
+            <ul class="text-black font-xs d-flex justify-content-between align-items-center">
+              <li class="font-base fw-700">Did I do it right?</li>
+              <li class="text-muted">Christina Lin</li>
+            </ul>
+          </a>
+        </div>
+      </div>
+      <!-- 右邊區塊 -->
+      <div class="col-lg-8 position-relative">
+        <!-- list group 內容切換-->
+        <div class="tab-content mb-4" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-01" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="card">
+              <!-- 版頭 -->
+              <div class="card-header d-flex justify-content-between align-items-center px-4 py-3 bg-primary">
+                <div>
+                  <p class="font-xs mb-1">Chapter Assignment 2 / HTML&amp;CSS</p>
+                  <h3 class="font-base fw-700">Please check this file for me, thanks!</h3>
+                </div>
+                <a href="javascript:;" class="lh-0">
+                  <span class="material-icons material-more">more_vert</span>
+                </a>
+              </div>
+              <!-- 資訊欄 -->
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <!-- 資訊欄01-->
+                  <li class="media d-flex mb-4">
+                    <img src="./assets/images/emilywang.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <h4 class="font-base fw-700 mb-1">Emily Wang</h4>
+                      <p class="text-muted font-xs mb-4">10:38 AM (4 hours ago)</p>
+                      <p class="font-s mb-4">Hi Teacher, the attached file is my homework of chapter 2. And here
+                        comes a question: Why in the following code the height of the <code>div</code> is bigger than
+                        the height of the <code>img</code>? There is a gap below the image, but it doesn’t seems to be
+                        a padding/margin.
+                        <br>What is the gap or extra space below image?
+                      </p>
+                      <a class="downloadBtn d-flex flex-nowrap align-items-center bg-primary mb-4"
+                      href="./assets/images/HW-2-David.zip" download>
+                        <span class="material-icons">attach_file</span>
+                        <p class="fw-700">HW-2-David.zip</p>
+                      </a>
+                      <hr>
+                    </div>
+                  </li>
+                  <!-- 資訊欄02-->
+                  <li class="media d-flex">
+                    <img src="./assets/images/andychen.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="outer">
+                          <h4 class="font-base fw-700 mb-1">Andy Chen (You)</h4>
+                          <p class="text-muted font-xs mb-4">13:24 AM (1 hours ago)</p>
+                        </div>
+                        <div class="outer">
+                          <a href="javascript:;" class="me-6">
+                            <span class="material-icons">star_border</span>
+                          </a>
+                          <a href="javascript:;">
+                            <span class="material-icons">create</span>
+                          </a>
+                        </div>
+                      </div>
+                      <p class="font-s mb-3">Hi David, by default, an image is rendered inline, like a letter so
+                        it sits on the same line that a, b, c and d sit on. There is space below that line for the
+                        descenders you find on letters like g, j, p and q.<br><br>You can:</p>
+                      <ul class="font-s ms-8">
+                        <li> adjust the <code>vertical-align </code>of the image to position it elsewhere (e.g. the
+                          <code>middle </code>) or </li>
+                        <li> change the <code>display</code> so it isn’t inline. </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-02" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="card">
+              <!-- 版頭 -->
+              <div class="card-header d-flex justify-content-between align-items-center px-4 py-3 bg-primary">
+                <div>
+                  <p class="font-xs mb-1">Chapter Assignment 2 / HTML&amp;CSS</p>
+                  <h3 class="font-base fw-700">My Homework</h3>
+                </div>
+                <a href="javascript:;" class="lh-0">
+                  <span class="material-icons material-more">more_vert</span>
+                </a>
+              </div>
+              <!-- 資訊欄 -->
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <!-- 資訊欄01-->
+                  <li class="media d-flex mb-4">
+                    <img src="./assets/images/andychen.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <h4 class="font-base fw-700 mb-1">Emily Wang</h4>
+                      <p class="text-muted font-xs mb-4">10:38 AM (4 hours ago)</p>
+                      <p class="font-s mb-4">Hi Teacher, the attached file is my homework of chapter 2. And here
+                        comes a question: Why in the following code the height of the <code>div</code> is bigger than
+                        the height of the <code>img</code>? There is a gap below the image, but it doesn’t seems to be
+                        a padding/margin.
+                        <br>What is the gap or extra space below image?
+                      </p>
+                      <a class="downloadBtn d-flex flex-nowrap align-items-center bg-primary mb-4"
+                      href="./assets/images/HW-2-David.zip" download>
+                        <span class="material-icons">attach_file</span>
+                        <p class="fw-700">HW-2-David.zip</p>
+                      </a>
+                      <hr>
+                    </div>
+                  </li>
+                  <!-- 資訊欄02-->
+                  <li class="media d-flex">
+                    <img src="./assets/images/emilywang.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="outer">
+                          <h4 class="font-base fw-700 mb-1">Andy Chen (You)</h4>
+                          <p class="text-muted font-xs mb-4">13:24 AM (1 hours ago)</p>
+                        </div>
+                        <div class="outer">
+                          <a href="javascript:;" class="me-6">
+                            <span class="material-icons">star_border</span>
+                          </a>
+                          <a href="javascript:;">
+                            <span class="material-icons">create</span>
+                          </a>
+                        </div>
+                      </div>
+                      <p class="font-s mb-3">Hi David, by default, an image is rendered inline, like a letter so
+                        it sits on the same line that a, b, c and d sit on. There is space below that line for the
+                        descenders you find on letters like g, j, p and q.<br><br>You can:</p>
+                      <ul class="font-s ms-8">
+                        <li> adjust the <code>vertical-align </code>of the image to position it elsewhere (e.g. the
+                          <code>middle </code>) or </li>
+                        <li> change the <code>display</code> so it isn’t inline. </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-03" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="card">
+              <!-- 版頭 -->
+              <div class="card-header d-flex justify-content-between align-items-center px-4 py-3 bg-primary">
+                <div>
+                  <p class="font-xs mb-1">Chapter Assignment 2 / HTML&amp;CSS</p>
+                  <h3 class="font-base fw-700">Please check this file for me, thanks!</h3>
+                </div>
+                <a href="javascript:;" class="lh-0">
+                  <span class="material-icons material-more">more_vert</span>
+                </a>
+              </div>
+              <!-- 資訊欄 -->
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <!-- 資訊欄01-->
+                  <li class="media d-flex mb-4">
+                    <img src="./assets/images/emilywang.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <h4 class="font-base fw-700 mb-1">Emily Wang</h4>
+                      <p class="text-muted font-xs mb-4">10:38 AM (4 hours ago)</p>
+                      <p class="font-s mb-4">Hi Teacher, the attached file is my homework of chapter 2. And here
+                        comes a question: Why in the following code the height of the <code>div</code> is bigger than
+                        the height of the <code>img</code>? There is a gap below the image, but it doesn’t seems to be
+                        a padding/margin.
+                        <br>What is the gap or extra space below image?
+                      </p>
+                      <a class="downloadBtn d-flex flex-nowrap align-items-center bg-primary mb-4"
+                      href="./assets/images/HW-2-David.zip" download>
+                        <span class="material-icons">attach_file</span>
+                        <p class="fw-700">HW-2-David.zip</p>
+                      </a>
+                      <hr>
+                    </div>
+                  </li>
+                  <!-- 資訊欄02-->
+                  <li class="media d-flex">
+                    <img src="./assets/images/andychen.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="outer">
+                          <h4 class="font-base fw-700 mb-1">Andy Chen (You)</h4>
+                          <p class="text-muted font-xs mb-4">13:24 AM (1 hours ago)</p>
+                        </div>
+                        <div class="outer">
+                          <a href="javascript:;" class="me-6">
+                            <span class="material-icons">star_border</span>
+                          </a>
+                          <a href="javascript:;">
+                            <span class="material-icons">create</span>
+                          </a>
+                        </div>
+                      </div>
+                      <p class="font-s mb-3">Hi David, by default, an image is rendered inline, like a letter so
+                        it sits on the same line that a, b, c and d sit on. There is space below that line for the
+                        descenders you find on letters like g, j, p and q.<br><br>You can:</p>
+                      <ul class="font-s ms-8">
+                        <li> adjust the <code>vertical-align </code>of the image to position it elsewhere (e.g. the
+                          <code>middle </code>) or </li>
+                        <li> change the <code>display</code> so it isn’t inline. </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-04" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="card">
+              <!-- 版頭 -->
+              <div class="card-header d-flex justify-content-between align-items-center px-4 py-3 bg-primary">
+                <div>
+                  <p class="font-xs mb-1">Chapter Assignment 2 / HTML&amp;CSS</p>
+                  <h3 class="font-base fw-700">My Homework</h3>
+                </div>
+                <a href="javascript:;" class="lh-0">
+                  <span class="material-icons material-more">more_vert</span>
+                </a>
+              </div>
+              <!-- 資訊欄 -->
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <!-- 資訊欄01-->
+                  <li class="media d-flex mb-4">
+                    <img src="./assets/images/andychen.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <h4 class="font-base fw-700 mb-1">Emily Wang</h4>
+                      <p class="text-muted font-xs mb-4">10:38 AM (4 hours ago)</p>
+                      <p class="font-s mb-4">Hi Teacher, the attached file is my homework of chapter 2. And here
+                        comes a question: Why in the following code the height of the <code>div</code> is bigger than
+                        the height of the <code>img</code>? There is a gap below the image, but it doesn’t seems to be
+                        a padding/margin.
+                        <br>What is the gap or extra space below image?
+                      </p>
+                      <a class="downloadBtn d-flex flex-nowrap align-items-center bg-primary mb-4"
+                      href="./assets/images/HW-2-David.zip" download>
+                        <span class="material-icons">attach_file</span>
+                        <p class="fw-700">HW-2-David.zip</p>
+                      </a>
+                      <hr>
+                    </div>
+                  </li>
+                  <!-- 資訊欄02-->
+                  <li class="media d-flex">
+                    <img src="./assets/images/emilywang.jpeg" class="flex-shrink-0" alt="people">
+                    <div class="flex-grow-1 ms-3">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="outer">
+                          <h4 class="font-base fw-700 mb-1">Andy Chen (You)</h4>
+                          <p class="text-muted font-xs mb-4">13:24 AM (1 hours ago)</p>
+                        </div>
+                        <div class="outer">
+                          <a href="javascript:;" class="me-6">
+                            <span class="material-icons">star_border</span>
+                          </a>
+                          <a href="javascript:;">
+                            <span class="material-icons">create</span>
+                          </a>
+                        </div>
+                      </div>
+                      <p class="font-s mb-3">Hi David, by default, an image is rendered inline, like a letter so
+                        it sits on the same line that a, b, c and d sit on. There is space below that line for the
+                        descenders you find on letters like g, j, p and q.<br><br>You can:</p>
+                      <ul class="font-s ms-8">
+                        <li> adjust the <code>vertical-align </code>of the image to position it elsewhere (e.g. the
+                          <code>middle </code>) or </li>
+                        <li> change the <code>display</code> so it isn’t inline. </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- button -->
+        <div class="paginationGroup d-flex justify-content-between align-items-center">
+          <div class="d-flex">
+            <a href="javascript:;" class="d-block lh-0 me-6">
+              <span class="material-icons">chevron_left</span>
+            </a>
+            <a href="javascript:;" class="d-block lh-0">
+              <span class="material-icons">chevron_right</span>
+            </a>
+          </div>
+          <div class="d-flex">
+            <button type="button" class="btn font-base btn-outline-secondary py-2 px-8 me-3">Mark as read</button>
+            <button type="button" class="btn font-base btn-secondary py-2 px-8 js-Reply">Reply</button>
+          </div>
+        </div>
+        <!-- 彈出選單 -->
+        <div class="replyGroup">
+          <div class="bg-primary d-flex px-6 border-bottom border-thirdly">
+            <select name="" id="" class="me-6 fw-700 border-0 bg-transparent">
+              <option value="Body Text">Body Text01</option>
+              <option value="Body Text">Body Text02</option>
+              <option value="Body Text">Body Text03</option>
+            </select>
+            <ul class="d-flex justify-content-start align-items-center py-3">
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">format_bold</i>
+                </a>
+              </li>
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">format_italic</i>
+                </a>
+              </li>
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">format_list_bulleted</i>
+                </a>
+              </li>
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">format_list_numbered</i>
+                </a>
+              </li>
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">insert_photo</i>
+                </a>
+              </li>
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">insert_link</i>
+                </a>
+              </li>
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">chevron_left</i>
+                </a>
+              </li>
+              <li class="me-6">
+                <a href="javascript:;">
+                  <i class="material-icons">chevron_right</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <textarea name="" id="" placeholder="Reply an answer…" class="py-4 px-6 border-0"></textarea>
+          <div class="paginationGroup d-flex justify-content-end align-items-center mb-4">
+            <div class="px-6">
+              <button type="button" class="btn font-base btn-outline-secondary py-2 px-8 me-3 js-cancel">Cancel</button>
+              <button type="button" class="btn font-base btn-secondary py-2 px-8">Reply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  let openBtn = document.querySelector(".js-Reply");
+  let cancelBtn = document.querySelector(".js-cancel");
+  let replyGroup = document.querySelector(".replyGroup");
+
+  openBtn.addEventListener("click", function (e) {
+    replyGroup.classList.add('active');
+  });
+
+  cancelBtn.addEventListener("click", function (e) {
+    replyGroup.classList.remove('active');
+  });
+</script>
+
 

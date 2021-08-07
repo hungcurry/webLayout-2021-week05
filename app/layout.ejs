@@ -15,8 +15,14 @@
   <body>
 
     <div class="wrap">
+
       <%- include('./assets/ejs/sidebar.ejs')%>
-      <%- contents %>
+
+      <main class="main">
+        <%- include('./assets/ejs/navbar.ejs')%>
+        <%- contents %>
+      </main>
+      
     </div>
       
     <script src="./assets/js/vendors.js"></script>
