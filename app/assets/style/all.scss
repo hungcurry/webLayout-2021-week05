@@ -4,10 +4,15 @@
 @import "bootstrap";
 
 
+
 // ------helpers--------
 @import "helpers/base";
 @import "helpers/_customVar";
 @import "helpers/mixin";
+
+
+
+// ------modules--------
 
 
 
@@ -17,9 +22,10 @@
 @import "layout/topNav";
 
 
-// ------pages---------
-@import "modules/assignment";
 
+// ------pages---------
+@import "pages/assignment";
+@import "pages/admin";
 
 
 // ------utilities-----
