@@ -9,18 +9,20 @@
   .material-search{
     margin-right: 2.6rem;
   }
-}
-.dropdown{
   .btn {
     &:after {
       display: none;
     }
   }
-  .assignmentBtn-icon {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    color: $secondary;
-  }
+}
+.materialBtn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: $secondary;
+}
+.materialBtn-start{
+  left: 0;
+  right: initial;
 }

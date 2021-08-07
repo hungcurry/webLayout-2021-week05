@@ -9,6 +9,11 @@
       border: 0.1rem solid $thirdly;
     }
   }
+  .btn {
+    &:after {
+      display: none;
+    }
+  }
 }
 .card{
   border: 0.1rem solid $thirdly;

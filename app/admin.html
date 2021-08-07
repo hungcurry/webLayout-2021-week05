@@ -2,5 +2,449 @@
 title: ANSWER-Admin
 layout: ./app/layout.ejs
 engine: ejs
-current: index
+current: admin
+theme: active
 ---
+
+<!-- 上方選單 -->
+<section class="topNav mb-3">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="w-auto d-flex flex-nowrap justify-content-start align-items-center">
+        <h2 class="title fw-700 font-l">Admin</h2>
+        <button class="btn dropdown-toggle font-base fw-700 p-0 ps-6 position-relative" type="button"
+        data-bs-toggle="modal" data-bs-target="#newAddModal">
+          <span class="material-icons materialBtn materialBtn-start text-secondary">add</span>
+          Add New Admin
+        </button>
+      </div>
+      <ul class="w-auto d-flex align-items-center">
+        <li>
+          <a href="javascript:;" class="d-block lh-1">
+            <span class="material-icons material-search">search</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="d-block lh-1">
+            <span class="material-icons">notifications_active</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="adminContent container">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-hover">
+          <thead class="admin-thead table-primary">
+            <tr class="admin-thead-tr fw-700">
+              <th width="10%" class="admin-thead-th" scope="col">ID
+                <span class="material-icons text-secondary font-xs">arrow_downward</span>
+              </th>
+              <th width="25%" class="admin-thead-th" scope="col">Name</th>
+              <th width="35%" class="admin-thead-th" scope="col">Email</th>
+              <th width="20%" class="admin-thead-th" scope="col">Verified</th>
+              <th width="10%" class="admin-thead-th" scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="admin-tbody">
+            <tr>
+              <td scope="row">#1</td>
+              <td>Emir Wicks</td>
+              <td>emir.wicks@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#2</td>
+              <td>Zaina Goldsmith</td>
+              <td>zaina.goldsmith@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#3</td>
+              <td>Mahima Lopez</td>
+              <td>mahima.lopez@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#4</td>
+              <td>Pharrell Murray</td>
+              <td>pharrell.murray@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#5</td>
+              <td>Annika Mcbride</td>
+              <td>annika.mcbride@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#6</td>
+              <td>Fatimah Clark</td>
+              <td>fatimah.clark@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#7</td>
+              <td>Klaudia Rhodes</td>
+              <td>klaudia.rhodes@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#8</td>
+              <td>Tillie Lucero</td>
+              <td>tillie.lucero@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#9</td>
+              <td>Sabrina Stephenson</td>
+              <td>sabrina.stephenson@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">#10</td>
+              <td>Annie Smith</td>
+              <td>annie.smith@mail.com</td>
+              <td>Yes</td>
+              <td class="button-group p-0 text-end">
+                <button type="button" class="btn readBtn p-0 me-6" 
+                data-bs-toggle="modal" data-bs-target="#readModalCenter">
+                  <span class="material-icons">remove_red_eye</span>
+                </button>
+                <button type="button" class="btn editBtn p-0" 
+                data-bs-toggle="modal" data-bs-target="#editModalLong">
+                  <span class="material-icons">edit</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="navigation d-flex justify-content-end" aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link page-arrow border-secondary" href="javascript:;">
+        <i aria-hidden="true" class="material-icons">chevron_left</i>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link border-secondary active" href="javascript:;">1</a></li>
+    <li class="page-item"><a class="page-link border-secondary" href="javascript:;">2</a></li>
+    <li class="page-item"><a class="page-link border-secondary" href="javascript:;">3</a></li>
+    <li class="page-item">
+      <a class="page-link border-secondary page-arrow" href="javascript:;">
+        <i aria-hidden="true" class="material-icons">chevron_right</i>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- newAddModal -->
+<div class="modal fade" id="newAddModal" 
+data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modalCardList">
+      <div class="modal-header">
+        <h5 class="font-l fw-700 mb-8" id="exampleModalLongTitle">New Admin</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="material-icons">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- account -->
+        <form action="index.html" method="post">
+          <h5 class="font-m fw-700 mb-4">Account</h5>
+          <label for="name" class="mb-1">Name</label>
+          <br>
+          <input type="text" id="name" class="w-100 mb-4" placeholder="Emir Wicks">
+          <br>
+          <label for="email" class="mb-1">Email</label>
+          <br>
+          <input type="text" id="email" class="w-100" placeholder="emir.wicks@mail.com">
+        </form>
+        <hr class="hr my-5">
+        <!-- Verification -->
+        <h5 class="font-m fw-700 mb-4">Verification</h5>
+        <span class="d-flex align-items-center font-base fw-700 mb-4">
+          <i class="material-icons text-danger me-2">
+            warning
+          </i>
+          unverified
+        </span>
+        <button type="button" class="btn btn-outline-secondary btn-send w-100">Send Verification Mail</button>
+        <hr class="hr">
+        <!-- access -->
+        <h5 class="font-m fw-700 mb-4">Access Level</h5>
+        <select name="access" id="access" class="btn btn-access d-flex align-items-center justify-content-between w-100 px-4">
+          <option value="-Choose access-">-Choose access level-</option>
+          <option value="-admin-">-Admin-</option>
+          <option value="-admin-">-Manufacturer-</option>
+        </select>
+        <hr class="hr">
+        <!-- Custom Access -->
+        <h5 class="font-m fw-700 mb-4">Custom Access</h5>
+        <ul class="form-check p-0">
+          <label class="form-check-option font-weight-normal">Lecture
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Coupon
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Message
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Setting
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Task menu
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary me-4" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-secondary" value="submit">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- readModal -->
+<div class="modal fade" id="readModalCenter"
+data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body readModal-body container">
+        <div class="row flex-nowrap justify-content-between align-items-start">
+          <div class="col-4">
+            <div class="imgBox position-relative">
+              <div class="imgBox_fit">
+                <img class="image" src="./assets/images/emir.jpeg" alt="photo-user">
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="textOuter">
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-2">#1</p>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="material-icons">close</span>
+                </button>
+              </div>
+              <p class="mb-1">Admin</p>
+              <h3 class="font-l fw-700">Emir Wicks</h3>
+              <p class="font-s text-muted mb-2">emir.wicks@mail.com</p>
+              <div class="h4 d-flex justify-content-between align-items-center">
+                <div class="font-s text bg-primary">Verified</div>
+                <div class="icon" data-bs-toggle="collapse" href="#collapseExample01" role="button" aria-expanded="false" aria-controls="collapseExample01">
+                  <a href="javascript:;" class="text-secondary">
+                    <span class="material-icons expand_more">
+                      expand_more
+                    </span>
+                    <span class="material-icons expand_less">
+                      expand_less
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="collapse" id="collapseExample01">
+                <div class="modal-footer d-flex flex-nowrap justify-content-between align-items-center">
+                  <button type="button" class="btn btn-outline-danger px-9 me-3" data-bs-dismiss="modal">Deactivate</button>
+                  <button type="button" class="btn btn-secondary btn-Edit">Edit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- editModal -->
+<div class="modal fade" id="editModalLong"
+data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modalCardList">
+      <div class="modal-header">
+        <h5 class="font-l fw-700 mb-8" id="exampleModalLongTitle">Edit Admin</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="material-icons">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- account -->
+        <form action="index.html" method="post">
+          <h5 class="font-m fw-700 mb-4">Account</h5>
+          <label for="name01" class="mb-1">Name</label>
+          <br>
+          <input type="text" id="name01" class="bg-primary border-0 w-100 mb-4" placeholder="Emir Wicks">
+          <br>
+          <label for="email01" class="mb-1">Email</label>
+          <br>
+          <input type="text" id="email01" class="bg-primary border-0 w-100" placeholder="emir.wicks@mail.com">
+        </form>
+        <hr class="hr my-5">
+        <!-- Verification -->
+        <h5 class="font-m fw-700 mb-4">Verification</h5>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="d-flex align-items-center h4 font-weight-bold  mb-4">
+            <i class="material-icons text-secondary mr-2">
+              check_circle
+            </i>
+            Verified
+          </span>
+          <span class="font-s text-muted">2020/4/12</span>
+        </div>
+        <button type="button" class="btn btn-outline-primary btn-send w-100 text-muted" disabled>Send Verification Mail</button>
+        <hr class="hr">
+        <!-- access -->
+        <h5 class="font-m fw-700 mb-4">Access Level</h5>
+        <select name="access" id="access" class="btn btn-access d-flex align-items-center justify-content-between w-100 px-4">
+          <option value="-Choose access-">-Admin-</option>
+          <option value="-admin-">-Manufacturer-</option>
+        </select>
+        <hr class="hr">
+        <!-- Custom Access -->
+        <h5 class="font-m fw-700 mb-4">Custom Access</h5>
+        <ul class="form-check p-0">
+          <label class="form-check-option font-weight-normal">Lecture
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Coupon
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Message
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Setting
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-check-option font-weight-normal">Task menu
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </ul>
+        <hr class="hr">
+        <!-- Deactivate Account-->
+        <h5 class="font-m fw-700 mb-4">Deactivate Account</h5>
+          <span class="d-flex align-items-center font-base text-danger mb-4">
+            <i class="material-icons text-danger me-2">
+              warning
+            </i>
+            This cannot be undone!
+          </span>
+        <button type="button" class="btn btn-outline-danger btn-send border-danger w-100">Deactivate This Account</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary me-4" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-secondary" value="submit">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

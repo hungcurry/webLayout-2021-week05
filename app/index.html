@@ -3,8 +3,42 @@ title: ANSWER-Assignment
 layout: ./app/layout.ejs
 engine: ejs
 current: index
+theme: active
 ---
 
+<!-- 上方選單 -->
+<section class="topNav mb-3">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="w-auto d-flex flex-nowrap justify-content-start align-items-center">
+        <h2 class="title fw-700 font-l">Assignment</h2>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle font-base fw-700 p-0 pe-6" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            All Courses
+            <span class="material-icons materialBtn text-secondary">expand_more</span>
+          </button>
+          <ul class="dropdown-menu font-base" aria-labelledby="dropdownMenuButton1">
+            <a class="dropdown-item" href="javascript:;">HTML/CSS</a>
+            <a class="dropdown-item" href="javascript:;">jQuery</a>
+            <a class="dropdown-item" href="javascript:;">Something else here</a>
+          </ul>
+        </div>
+      </div>
+      <ul class="w-auto d-flex align-items-center">
+        <li>
+          <a href="javascript:;" class="d-block lh-1">
+            <span class="material-icons material-search">search</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="d-block lh-1">
+            <span class="material-icons">notifications_active</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 <!-- 內容 -->
 <section class="assignmentContent">
   <div class="container">
@@ -12,7 +46,7 @@ current: index
       <div class="w-auto dropdown">
         <button class="btn dropdown-toggle font-base fw-700 p-0 pe-6" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
           All (4)
-          <span class="material-icons assignmentBtn-icon text-secondary">expand_more</span>
+          <span class="material-icons materialBtn text-secondary">expand_more</span>
         </button>
         <ul class="dropdown-menu font-base" aria-labelledby="dropdownMenuButton2">
           <a class="dropdown-item" href="#">Action</a>

@@ -1,3 +1,215 @@
 /*-------------------------*/
 /* admin
 ---------------------------*/
+.adminContent{
+  padding:  0 2rem;
+}
+.table{
+  .admin-thead-th{
+    padding: 1.6rem 0rem 0.45rem 0 ;
+    border-top: none;
+    border-bottom: 0.1rem solid $black;
+  }
+  .admin-tbody{
+    tr{
+      cursor: pointer;
+      &:hover{
+        background-color: $primary;
+      }
+    }
+    td{
+      padding: 1.2rem 0 1.7rem 0 ;
+      border-top: 0.1rem solid $thirdly;
+    }
+    tr:last-child td,
+    tr:last-child th {
+      border-bottom: 0.1rem solid $thirdly;
+    }
+    .button-group{
+      padding: 0;
+      vertical-align: middle;
+    }
+    .material-icons{
+      vertical-align: middle;
+    }
+  }
+}
+//navigation
+.navigation{
+  margin-top: 6.3rem;
+  padding: 0 3.2rem;
+  .page-link{
+    padding-right:1.1rem;
+    padding-left:1.1rem;
+    line-height: 1.65;
+    color: $dark;
+    &.active{
+      background-color: $secondary;
+      color: $white;
+    }
+    &:hover{
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+  .page-arrow{
+    line-height: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    color: $secondary;
+  }
+}
+//readModal
+.readModal-body{
+  padding: 3.2rem;
+  .col-4{
+    min-width: 16.7rem;
+  }
+  //圖片區塊
+  .imgBox{
+    padding-bottom: 100%;
+    .imgBox_fit{
+      @include width(100% , 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .image{
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: inherit;
+    }
+  }
+  .text{
+    padding:0.4rem 0.8rem;
+  }
+  .modal-footer{
+    padding: 0;
+    padding-top: 3.2rem;
+    border: none;
+  }
+  .btn{
+    @include fontSize(1.6rem , 2.4rem);
+    padding: 0.8rem 3.2rem;
+  }
+  .expand_more {
+    display: none;
+  }
+  // 開關
+  .expand_less {
+    display: inline-block;
+  }
+  .collapsed{
+    .expand_more{
+      display: inline-block;
+    }
+    .expand_less{
+      display: none;
+    }
+  }  
+}
+//newAdd / edit Modal
+.modalCardList{
+  padding: 3.2rem 3.2rem 2.4rem 3.2rem;
+  text-align: left;
+  max-height: calc(100vh - 3.5rem);
+  overflow: hidden;
+  .modal-header{
+    padding: 0;
+    border-bottom: none;
+  }
+  .modal-body{
+    padding: 0;
+    overflow-y: auto;
+    input{
+      border: 0.1rem solid $black;
+      padding: 1.2rem  1.6rem;
+    }
+    //Verification
+    .btn-send{
+      @include fontSize(1.6rem , 1.9rem);
+      font-weight: bold;
+      padding: 1.5rem  0rem;
+      border: 0.1rem solid $thirdly;
+    }
+    hr{
+      border-top: 0.1rem solid $thirdly;
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+    //access
+    .btn-access{
+      border: 0.1rem solid $black;
+      padding: 1.2rem  1.6rem;
+      @include fontSize(1.6rem , 1.9rem);
+      color: #0000009A;
+      /*移除箭頭樣式*/
+      appearance:none;
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      background-image: url('../images/expand_more-black-18dp.svg');
+      background-position: 96% center;
+      background-repeat: no-repeat;
+    }
+    //Custom Access 
+    .form-check{
+      .form-check-option{
+        display: block;
+        position: relative;
+        padding-left: 3.5rem;
+        margin-bottom: 1.2rem;
+        cursor: pointer;
+        user-select: none;
+        &:last-child{
+          margin-bottom: 0rem;
+        }
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        font-weight: 400;
+      }
+      .checkmark{
+        @include width(2rem , 2rem);
+        position: absolute;
+        border: 0.2rem solid $dark;
+        border-radius: 0.2rem;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        &:after{
+          content: "";
+          position: absolute;
+          display: none;
+          left: 0.5rem;
+          top: 0;
+          width: 0.7rem;
+          height: 1.2rem;
+          border: 0.1rem solid $secondary;
+          border-width: 0 0.3rem 0.3rem 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  .modal-footer{
+    padding: 0;
+    border: none;
+    margin-top: 5rem;
+    .btn{
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding: 0.8rem 3.2rem;
+    }
+  }
+}
+/* 開關 checkMark checked */
+.form-check .form-check-option input:checked ~ .checkmark:after {
+  display: block;
+}
