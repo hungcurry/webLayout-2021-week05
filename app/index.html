@@ -103,7 +103,7 @@ theme: active
         </div>
       </div>
       <!-- 右邊區塊 -->
-      <div class="col-lg-8 position-relative">
+      <div class="col-lg-8">
         <!-- list group 內容切換-->
         <div class="tab-content mb-4" id="nav-tabContent">
           <div class="tab-pane fade show active" id="list-01" role="tabpanel" aria-labelledby="list-home-list">
@@ -376,7 +376,7 @@ theme: active
           </div>
         </div>
         <!-- button -->
-        <div class="paginationGroup d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center position-relative">
           <div class="d-flex">
             <a href="javascript:;" class="d-block lh-0 me-6">
               <span class="material-icons">chevron_left</span>
@@ -389,63 +389,14 @@ theme: active
             <button type="button" class="btn font-base btn-outline-secondary py-2 px-8 me-3">Mark as read</button>
             <button type="button" class="btn font-base btn-secondary py-2 px-8 js-Reply">Reply</button>
           </div>
-        </div>
-        <!-- 彈出選單 -->
-        <div class="replyGroup">
-          <div class="bg-primary d-flex px-6 border-bottom border-thirdly">
-            <select name="" id="" class="me-6 fw-700 border-0 bg-transparent">
-              <option value="Body Text">Body Text01</option>
-              <option value="Body Text">Body Text02</option>
-              <option value="Body Text">Body Text03</option>
-            </select>
-            <ul class="d-flex justify-content-start align-items-center py-3">
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">format_bold</i>
-                </a>
-              </li>
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">format_italic</i>
-                </a>
-              </li>
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">format_list_bulleted</i>
-                </a>
-              </li>
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">format_list_numbered</i>
-                </a>
-              </li>
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">insert_photo</i>
-                </a>
-              </li>
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">insert_link</i>
-                </a>
-              </li>
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">chevron_left</i>
-                </a>
-              </li>
-              <li class="me-6">
-                <a href="javascript:;">
-                  <i class="material-icons">chevron_right</i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <textarea name="" id="" placeholder="Reply an answer…" class="py-4 px-6 border-0"></textarea>
-          <div class="paginationGroup d-flex justify-content-end align-items-center mb-4">
-            <div class="px-6">
-              <button type="button" class="btn font-base btn-outline-secondary py-2 px-8 me-3 js-cancel">Cancel</button>
-              <button type="button" class="btn font-base btn-secondary py-2 px-8">Reply</button>
+          <!-- 彈出選單 -->
+          <div class="replyGroup-outer">
+            <div class="replyGroup">
+              <div id="editor">Reply an answer…</div>
+              <div class="paginationGroup d-flex justify-content-end align-items-center mb-4 position-absolute">
+                <button type="button" class="btn font-base btn-outline-secondary py-2 px-8 me-3 js-cancel">Cancel</button>
+                <button type="button" class="btn font-base btn-secondary py-2 px-8">Reply</button>
+              </div>
             </div>
           </div>
         </div>
@@ -454,17 +405,28 @@ theme: active
   </div>
 </section>
 <script>
+(function () {
+
   let openBtn = document.querySelector(".js-Reply");
   let cancelBtn = document.querySelector(".js-cancel");
-  let replyGroup = document.querySelector(".replyGroup");
+  let replyGroupOuter = document.querySelector(".replyGroup-outer");
 
   openBtn.addEventListener("click", function (e) {
-    replyGroup.classList.add('active');
+    replyGroupOuter.classList.add('active');
   });
-
   cancelBtn.addEventListener("click", function (e) {
-    replyGroup.classList.remove('active');
+    replyGroupOuter.classList.remove('active');
   });
+  ClassicEditor
+    .create( document.querySelector( '#editor' ) )
+    .then( editor => {
+    console.log( editor );
+  } )
+    .catch( error => {
+    console.error( error );
+  } );
+
+}());
 </script>
 
 
